@@ -27,8 +27,10 @@ if __name__ == "__main__":
         params = config('preprod_gba','database.ini')
         sqL = read_sql()
         exec_db(sqL)
-    else (input2=='UAT'):
+    elif (input2=='UAT'):
         params = config('uat_gba','database.ini')
         sqL = read_sql()
         print(sqL)
         exec_db(sqL)
+    else:
+        print("INVALID INPUT")
