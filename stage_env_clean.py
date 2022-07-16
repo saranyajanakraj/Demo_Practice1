@@ -22,8 +22,10 @@ def exec_db(sqL):
    
 if __name__ == "__main__":
     #input2='preprod_stage'
-    input2 =os.environ['ENV']
-    if (input2=='preprod_stage'):
-        params = config(input2,'database.ini')
+    input2 = os.environ['ENV']
+     print(input2)
+    if (input2=='PRE-PROD'):
+        params = config('preprod_stage','database.ini')
         sqL = read_sql()
+        print(sqlCommands)
         exec_db(sqL)
