@@ -29,8 +29,11 @@ if __name__ == "__main__":
         sqL = read_sql()
         print(sqL)
         exec_db(sqL)
-    else if (input2=='UAT'):
+    elif (input2=='UAT'):
         params = config('uat_stage','database.ini')
         sqL = read_sql()
         print(sqL)
         exec_db(sqL)
+    else:
+        print("INVALID INPUT")
+        
