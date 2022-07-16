@@ -26,5 +26,5 @@ if __name__ == "__main__":
     if (input2=='PRE-PROD'):
         params = config('preprod_stage','database.ini')
         sqL = read_sql()
-        print(sqlCommands)
+        print(sqL)
         exec_db(sqL)
