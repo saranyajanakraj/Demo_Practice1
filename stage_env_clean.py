@@ -22,6 +22,7 @@ def exec_db(sqL):
    
 if __name__ == "__main__":
     #input2='preprod_stage'
+   
     input2 = os.environ['ENV']
     print(input2)
     if (input2=='PRE-PROD'):
