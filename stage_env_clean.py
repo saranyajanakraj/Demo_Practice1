@@ -2,7 +2,7 @@ import os
 import sys
 import psycopg2
 from configparser import ConfigParser
-from stage_db_clean import config
+from connection_config import config
 
 def read_sql():
     fd = open('stage_clean.sql', 'r')
@@ -17,7 +17,7 @@ def exec_db(sqL):
         cur = conn.cursor()
         cur.execute(f'{command}')
         conn.commit()
-        print("DB Cleanup Done")
+        
     
    
 if __name__ == "__main__":
@@ -30,11 +30,13 @@ if __name__ == "__main__":
         sqL = read_sql()
         print(sqL)
         exec_db(sqL)
+        print("DB Cleanup Done")
     elif (input2=='UAT'):
         params = config('uat_stage','database.ini')
         sqL = read_sql()
         print(sqL)
         exec_db(sqL)
+        print("DB Cleanup Done")
     else:
         print("INVALID INPUT")
         
