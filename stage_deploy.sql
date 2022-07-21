@@ -1,1 +1,1 @@
-create schema stage_db;create table stage_db.fleet(id int,name varchar(20),contact_no int);insert into stage_db.fleet values(1,'maruti',91714241);insert into stage_db.fleet values(2,'ford',93432241);insert into stage_db.fleet values(3,'hyundai',91734241);
+create schema stage_db;create table stage_db.fleet(id int,cusname varchar(20),contact_no int);insert into stage_db.fleet values(1,'maruti',91714241);insert into stage_db.fleet values(2,'ford',93432241);insert into stage_db.fleet values(3,'hyundai',91734241);
