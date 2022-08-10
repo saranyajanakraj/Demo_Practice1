@@ -1,1 +1,1 @@
-drop table gba_db.customer;create table gba_db.customer(id int,name varchar(10),address varchar(40));
+drop table gba_db.customer;create table gba_db.common(id int,name varchar(10),address varchar(40));
